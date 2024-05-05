@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Simple Dashboard</title>
-    <!-- Linking to an external CSS library for styling -->
+    <!-- Linking to an external CSS library for stylinggggggggggggggg -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
