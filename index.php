@@ -637,7 +637,18 @@
         </div>
     </div>
     <!-- Newsletter End -->
+
+
+
     
+    <!-- CHATBOT CODE  -->
+    <div id="chatbot-icon">
+    <img src="chatbot-icon.png" alt="Chatbot Icon">
+</div>
+<!-- CHATBOT CODE -->
+
+
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: -75px;">
@@ -695,9 +706,8 @@
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a> -->
 
 
     <!-- JavaScript Libraries -->
