@@ -96,8 +96,8 @@
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            <a href="form.php" class="btn btn-primary py-2 px-4 ms-3">Signup</a>
+            <!-- <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+            <a href="form.php" class="btn btn-primary py-2 px-4 ms-3">Signup</a> -->
         </div>
     </nav>
     <!-- Navbar End -->
@@ -179,6 +179,11 @@
         <small class="error" id="usernameError"></small>
       </div>
       <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <small class="error" id="emailError"></small>
+      </div>
+      <div class="input-group">
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
         <small class="error" id="passwordError"></small>
@@ -209,8 +214,10 @@
     // Reset previous errors
     document.getElementById('firstNameError').textContent = '';
     document.getElementById('lastNameError').textContent = '';
+    document.getElementById('ageError').textContent = '';
     document.getElementById('genderError').textContent = '';
     document.getElementById('usernameError').textContent = '';
+    document.getElementById('emailError').textContent = '';
     document.getElementById('passwordError').textContent = '';
     document.getElementById('confirmPasswordError').textContent = '';
   
@@ -220,6 +227,7 @@
     var age = document.getElementById('age').value;
     var gender = document.getElementById('gender').value;
     var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     var confirmPassword = document.getElementById('confirmPassword').value;
   
