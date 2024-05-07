@@ -90,7 +90,7 @@
                         <a href="price.html" class="dropdown-item">Pricing Plan</a>
                         <a href="team.html" class="dropdown-item">Our Dentist</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="appointment.html" class="dropdown-item active">Appointment</a>
+                        <a href="appointment.php" class="dropdown-item active">Appointment</a>
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>

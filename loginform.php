@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="loginform.css">
 </head>
 
 <body>
@@ -122,7 +123,7 @@
 
 
     <!-- Hero Start -->
-    <div class="container-fluid bg-primary py-5 hero-header mb-5">
+    <!-- <div class="container-fluid bg-primary py-5 hero-header mb-5">
         <div class="row py-3">
             <div class="col-12 text-center">
                 <h1 class="display-3 text-white animated zoomIn">Doctor</h1>
@@ -131,124 +132,105 @@
                 <a href="" class="h4 text-white">doctors</a>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Hero End -->
 
+<!-- form start  -->
+<!-- <div class="container">
+    <form id="loginForm" onsubmit="validateForm(event)">
+      <h2>Login</h2>
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <small class="error" id="usernameError"></small>
+      </div>
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <small class="error" id="passwordError"></small>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div> -->
 
-   <!-- Team Start -->
-   <div class="container-fluid py-5">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.1s">
-                <div class="section-title bg-light rounded h-100 p-5">
-                    <h5 class="position-relative d-inline-block text-primary text-uppercase">Our Dentist</h5>
-                    <h1 class="display-6 mb-4">Meet Our Certified & Experienced Doctors</h1>
-                    <a href="appointment.php" class="btn btn-primary py-3 px-5">Appointment</a>
-                </div>
-            </div>
-            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                <div class="team-item">
-                    <div class="position-relative rounded-top" style="z-index: 1;">
-                        <img class="img-fluid rounded-top w-100" src="img/team-1.jpg" alt="">
-                        <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
-                        <h4 class="mb-2">Dr. Zara</h4>
-                        <p class="text-primary mb-0">indsutrial Phsycologist</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                <div class="team-item">
-                    <div class="position-relative rounded-top" style="z-index: 1;">
-                        <img class="img-fluid rounded-top w-100" src="img/team-2.jpg" alt="">
-                        <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
-                        <h4 class="mb-2">Dr. Maryam Naeem</h4>
-                        <p class="text-primary mb-0">Clinical Phsycologist</p>
-                    </div>
-                </div>
-            </div>
-            <!--
-            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.1s">
-                <div class="team-item">
-                    <div class="position-relative rounded-top" style="z-index: 1;">
-                        <img class="img-fluid rounded-top w-100" src="img/team-3.jpg" alt="">
-                        <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
-                        <h4 class="mb-2">Dr. John Doe</h4>
-                        <p class="text-primary mb-0">Implant Surgeon</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                <div class="team-item">
-                    <div class="position-relative rounded-top" style="z-index: 1;">
-                        <img class="img-fluid rounded-top w-100" src="img/team-4.jpg" alt="">
-                        <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
-                        <h4 class="mb-2">Dr. John Doe</h4>
-                        <p class="text-primary mb-0">Implant Surgeon</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                <div class="team-item">
-                    <div class="position-relative rounded-top" style="z-index: 1;">
-                        <img class="img-fluid rounded-top w-100" src="img/team-5.jpg" alt="">
-                        <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
-                        <h4 class="mb-2">Dr. John Doe</h4>
-                        <p class="text-primary mb-0">Implant Surgeon</p>
-                    </div>
-                    <!-->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Team End -->
+  <div class="container">
+    <form id="loginForm" onsubmit="validateForm(event)">
+      <h2><center>Login</center></h2>
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <small class="error" id="usernameError"></small>
+      </div>
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <small class="error" id="passwordError"></small>
+      </div>
+      <button type="submit">Login</button>
+      <p>Don't have an account? <a href="signupform.php">Create new account</a></p>
+    </form>
+  </div>
+
+
+  <script>function validateForm(event) {
+    event.preventDefault();
+  
+    // Reset previous errors
+    document.getElementById('usernameError').textContent = '';
+    document.getElementById('passwordError').textContent = '';
+  
+    // Get form inputs
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+  
+    // Validate username
+    if (username.trim() === '') {
+      document.getElementById('usernameError').textContent = 'Username is required';
+      return;
+    }
+  
+    // Validate password
+    if (password.trim() === '') {
+      document.getElementById('passwordError').textContent = 'Password is required';
+      return;
+    }
+  
+    // If both fields are filled, you can proceed with the login process
+    // For now, let's just show a success message
+    alert('Login successful!');
+  }
+  </script>
+  <!-- form end  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 <!--  -->
 <!-- <div id="chatbot-icon">
     <img src="chatbot-icon.jpeg" alt="Chatbot Icon">
 </div> -->
 <!-- Chatbot button -->
-<button class="chatbot-button" id="chatbot-button" onclick="toggleChatbot()">
-    <img class="chatbot-icon" src="img/chatbot-.png" alt="Chatbot">
+<!-- <button class="chatbot-button" id="chatbot-button" onclick="toggleChatbot()">
+    <img class="chatbot-icon" src="img/chatbot.png" alt="Chatbot">
 </button>
 
 <!-- Chatbot container -->
-<div class="chatbot-container" id="chatbot-container">
+<!-- <div class="chatbot-container" id="chatbot-container">
     <div class="chatbot-header">
         <span>Chatbot</span>
         <button class="close-button" onclick="closeChatbot()">X</button>
@@ -312,12 +294,12 @@
         messageDiv.appendChild(messageContent);
         chatBody.appendChild(messageDiv);
         chatBody.scrollTop = chatBody.scrollHeight; // Scroll to bottom
-    }
-</script>
+    } -->
+<!-- </script> --> -->
     
 
      <!-- Footer Start -->
-     <div class="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: -75px;">
+     <!-- <div class="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: -75px;">
         <div class="container pt-5">
             <div class="row g-5 pt-4">
                 <div class="col-lg-3 col-md-6">
@@ -340,7 +322,7 @@
                         <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
                     </div>
                 </div> -->
-                <div class="col-lg-3 col-md-6">
+                <!-- <div class="col-lg-3 col-md-6">
                     <h3 class="text-white mb-4">Get In Touch</h3>
                     <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Street, New York, USA</p>
                     <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
@@ -369,7 +351,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --> -->
     <!-- Footer End -->
 
 

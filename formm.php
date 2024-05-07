@@ -27,7 +27,7 @@
 					<input type="password" name="pswd" placeholder="Password" required="">
 					<button>Sign in</button>
 				</form> -->
-				<form action="dbinsert.php" method="post">
+				<form action=".php" method="post">
 					<label for="chk" aria-hidden="true">Sign up</label>
 					<center>
 					<div style="display: inline-block;">

@@ -1,11 +1,8 @@
-<!-- HRLLOOOO NEMO-->
+
 
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- yeaaahhh  -->
-<!-- hibaaaaagggggg -->
-<!-- nemoooooo -->
 
 
 <head>
@@ -98,13 +95,13 @@
                         <a href="price.html" class="dropdown-item">Pricing Plan</a>
                         <a href="team.html" class="dropdown-item">Our Therapists</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="appointment.html" class="dropdown-item">Appointment</a>
+                        <a href="appointment.php" class="dropdown-item">Appointment</a>
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            <a href="loginform.html" class="btn btn-primary py-2 px-4 ms-3">Login</a>
+            <a href="loginform.php" class="btn btn-primary py-2 px-4 ms-3">Login</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -224,7 +221,7 @@
                            
                            
                             
-                            <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Appointment</a>
+                            <a href="appointment.php" class="btn btn-primary py-2 px-4 ms-3">Appointment</a>
                         </div>
                         <br>
                        <!-- <p class="text-white">Start Your Path to Recovery Today.</p>  --> 
@@ -530,7 +527,7 @@
                     <div class="section-title bg-light rounded h-100 p-5">
                         <h5 class="position-relative d-inline-block text-primary text-uppercase">Our Dentist</h5>
                         <h1 class="display-6 mb-4">Meet Our Certified & Experienced Doctors</h1>
-                        <a href="appointment.html" class="btn btn-primary py-3 px-5">Appointment</a>
+                        <a href="appointment.php" class="btn btn-primary py-3 px-5">Appointment</a>
                     </div>
                 </div>
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
@@ -654,8 +651,9 @@
 
 <!-- Chatbot button -->
 <button class="chatbot-button" id="chatbot-button" onclick="toggleChatbot()">
-        <img class="chatbot-icon" src="img/chatbot.jpeg" alt="Chatbot">
+        <img class="chatbot-icon" src="img/chatbot-.png" alt="Chatbot">
     </button>
+   
 
     <!-- Chatbot container -->
     <div class="chatbot-container" id="chatbot-container">

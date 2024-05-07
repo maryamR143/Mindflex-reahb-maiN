@@ -13,7 +13,7 @@
     
     if($conn->query($mysql)){
        
-            header("location:appointment.php");
+            header("location:dashboard.php");
     }
     else{
         echo"some error occured";
