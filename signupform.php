@@ -156,6 +156,7 @@
 
   <div class="container">
   <div class="signup">
+  <form id="signupForm" onsubmit="validateForm(event)">
   <form action="dbinsert.php" method="post">
   <!-- <form id="signupForm" onsubmit="validateForm(event)"> -->
   
@@ -220,16 +221,16 @@
     event.preventDefault();
   
     // Reset previous errors
-    document.getElementById('firstNameError').textContent = '';
-    document.getElementById('lastNameError').textContent = '';
+    document.getElementById('firstnameError').textContent = '';
+    document.getElementById('lastnameError').textContent = '';
     document.getElementById('genderError').textContent = '';
     document.getElementById('usernameError').textContent = '';
     document.getElementById('passwordError').textContent = '';
     document.getElementById('confirmPasswordError').textContent = '';
   
     // Get form inputs
-    var firstName = document.getElementById('firstName').value;
-    var lastName = document.getElementById('lastName').value;
+    var firstname = document.getElementById('firstname').value;
+    var lastname = document.getElementById('lastname').value;
     var age = document.getElementById('age').value;
     var gender = document.getElementById('gender').value;
     var username = document.getElementById('username').value;
@@ -237,14 +238,14 @@
     var confirmPassword = document.getElementById('confirmPassword').value;
   
     // Validate first name (no numbers allowed)
-    if (/\d/.test(firstName)) {
-      document.getElementById('firstNameError').textContent = 'First name cannot contain numbers';
+    if (/\d/.test(firstname)) {
+      document.getElementById('firstnameError').textContent = 'First name cannot contain numbers';
       return;
     }
   
     // Validate last name (no numbers allowed)
-    if (/\d/.test(lastName)) {
-      document.getElementById('lastNameError').textContent = 'Last name cannot contain numbers';
+    if (/\d/.test(lastname)) {
+      document.getElementById('lastnameError').textContent = 'Last name cannot contain numbers';
       return;
     }
   // Validate age (must be 18 or older)
@@ -324,7 +325,7 @@
     <img class="chatbot-icon" src="img/chatbot.png" alt="Chatbot">
 </button>
 
-<!-- Chatbot container -->
+ Chatbot container -->
 <!-- <div class="chatbot-container" id="chatbot-container">
     <div class="chatbot-header">
         <span>Chatbot</span>
@@ -390,7 +391,7 @@
         chatBody.appendChild(messageDiv);
         chatBody.scrollTop = chatBody.scrollHeight; // Scroll to bottom
     } -->
-<!-- </script> --> -->
+<!-- </script> --> 
     
 
      <!-- Footer Start -->
@@ -407,7 +408,7 @@
                         <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
                     </div>
                 </div>
-                <!-- <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <h3 class="text-white mb-4">Popular Links</h3>
                     <div class="d-flex flex-column justify-content-start">
                         <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
@@ -446,7 +447,7 @@
                 </div>
             </div>
         </div>
-    </div> --> -->
+    </div> -->
     <!-- Footer End -->
 
 
