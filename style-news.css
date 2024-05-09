@@ -1,0 +1,35 @@
+.news-main{
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    margin: auto;
+    
+}
+
+
+
+.n-img-size div {
+    height: 550px;
+    width: 350px;
+    border-radius: 7%;
+    /* background-color: black; */
+margin: auto;
+border: none;
+}
+
+.n-img-size img {
+    height: 350px;
+    width: 350px;
+    border-radius: 7%;
+    /* background-color: rgb(195, 26, 26); */
+
+}
+.n-text 
+{
+    position: absolute;
+    top: 80%;
+    color: rgb(11, 11, 11);
+    
+}
+
+/* deials css */
