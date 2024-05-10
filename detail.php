@@ -28,7 +28,7 @@ display: flex;
 .detail-img {
 
   width: 90%;
-    height: 300px;
+    height: 500px;
     border-style: hidden;
     display:flex;
 }
@@ -68,8 +68,10 @@ display: flex;
     $images = explode(",",$row['n_image']);
 ?>
   <header class="main-header">
-  
-    <img class="head-img" src="uploads/<?php echo $images[0]?>"  />
+  <center>
+    <img class="head-img" src="uploads/<?php echo $images[0]?>" />
+ </center>
+ 
     <div class="deatil-top-heading">
       <p class="card-title"><b><?php echo $row["c_name"] ?></b></p>
     </div>
@@ -102,7 +104,7 @@ display: flex;
                    <?php
                         for ($i=0; $i <  count($images); $i++) { 
                     ?>
-                    <div><img class="detail-img" src="uploads/<?php echo $images[$i]?>" alt=""></div>
+                    <!-- <div><img class="detail-img" src="uploads/<?php echo $images[$i]?>" alt=""></div> -->
                     <?php
                         }
                    ?>

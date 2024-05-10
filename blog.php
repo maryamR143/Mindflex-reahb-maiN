@@ -97,7 +97,7 @@
     <!-- Topbar End -->
 
 
-    <!-- Navbar Start -->
+  <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
         <a href="index.php" class="navbar-brand p-0">
             <h1 class="m-0 text-primary"><i class="fa fa-brain me-2"></i>Mindflex Rehabilitation</h1>
@@ -108,13 +108,14 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <a href="index.php" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="blog.php" class="nav-item nav-link">Blog</a>
+                <a href="about.html" class="nav-item nav-link active">About</a>
                 <a href="service.html" class="nav-item nav-link">Service</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
                         <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                        <a href="team.html" class="dropdown-item active">Our Doctors</a>
+                        <a href="team.html" class="dropdown-item">Our Dentist</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="appointment.php" class="dropdown-item">Appointment</a>
                     </div>
@@ -122,12 +123,23 @@
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            <a href="signupform.php" class="btn btn-primary py-2 px-4 ms-3">Signup</a>
+            <a href="loginform.html" class="btn btn-primary py-2 px-4 ms-3">Login</a>
         </div>
     </nav>
     <!-- Navbar End -->
 
-
+ <!-- Hero Start -->
+ <div class="container-fluid bg-primary py-5 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">Blog</h1>
+                <a href="" class="h4 text-white">Home</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="" class="h4 text-white">Blog</a>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
         <div class="modal-dialog modal-fullscreen">
@@ -148,7 +160,7 @@
   
    <div class="news-main">
     <div class="container-fluid m-div">
-        <div class="row mt-4 pb-4 pt-2  n-img-size">
+        <div class="row mt-4 pb-4 pt-2  n-img-size"  >
         <?php
             while($row = mysqli_fetch_assoc($result)){
                 $arr = explode(",",$row['n_image']);

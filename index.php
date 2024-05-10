@@ -142,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <!-- <div class="carousel-item">
                     <img class="w-100" src="img/carousel-2.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
@@ -152,9 +152,9 @@
                             <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contact Us</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -163,7 +163,7 @@
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-            </button>
+            </button> -->
         </div>
     </div>
     <!-- Carousel End -->
@@ -175,25 +175,46 @@
             <div class="row gx-0">
                 <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
                     <div class="bg-primary d-flex flex-column p-5" style="height: 300px;">
-                        <h3 class="text-white mb-3">Opening Hours</h3>
+                        <center><h3 class="text-white mb-3">Virtual Therapy</h3></center>
                         <div class="d-flex justify-content-between text-white mb-3">
-                            <h6 class="text-white mb-0">Mon - Fri</h6>
-                            <p class="mb-0"> 8:00am - 9:00pm</p>
+                            <!-- <h6 class="text-white mb-0">Mon - Fri</h6>
+                            <p class="mb-0"> 8:00am - 9:00pm</p> -->
+                            
+                            Explore a new dimension of therapy with 
+                            VRTherapy—where recovery meets technology
+                            
+                           
                         </div>
-                        <div class="d-flex justify-content-between text-white mb-3">
+                        <br>
+                        <!-- <a href="loginform.html" class="btn btn-primary py-2 px-4 ms-3" style="background-color: #FF5733; color: white;">Join Now</a> -->
+                        <a href="loginform.html" class="btn btn-primary py-2 px-4 ms-3 custom-button">Join Now</a>
+
+<!-- CSS for hover effect -->
+<style>
+.custom-button {
+    background-color: #091E3E; /* Original color */
+    color: white;
+}
+
+.custom-button:hover {
+    background-color:  #F57E57  ; /* Darker shade for hover effect */
+    color: white;
+}
+</style>
+                        <!-- <div class="d-flex justify-content-between text-white mb-3">
                             <h6 class="text-white mb-0">Saturday</h6>
                             <p class="mb-0"> 8:00am - 7:00pm</p>
-                        </div>
-                        <div class="d-flex justify-content-between text-white mb-3">
+                        </div> -->
+                        <!-- <div class="d-flex justify-content-between text-white mb-3">
                             <h6 class="text-white mb-0">Sunday</h6>
                             <p class="mb-0"> 8:00am - 5:00pm</p>
-                        </div>
-                        <a class="btn btn-light" href="">Appointment</a>
+                        </div> -->
+                        <!-- <a class="btn btn-light" href="">Appointment</a> -->
                     </div>
                 </div>
                 <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
                     <div class="bg-dark d-flex flex-column p-5" style="height: 300px;">
-                        <h3 class="text-white mb-3">Search A Doctor</h3>
+                       <center> <h3 class="text-white mb-3">Search A Doctor</h3> </center>
                         <div class="date mb-3" id="date" data-target-input="nearest">
                             <input type="text" class="form-control bg-light border-0 datetimepicker-input"
                                 placeholder="Appointment Date" data-target="#date" data-toggle="datetimepicker" style="height: 40px;">
@@ -209,9 +230,15 @@
                 </div>
                 <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
                     <div class="bg-secondary d-flex flex-column p-5" style="height: 300px;">
-                        <h3 class="text-white mb-3">Make Appointment</h3>
-                        <p class="text-white">Ipsum erat ipsum dolor clita rebum no rebum dolores labore, ipsum magna at eos et eos amet.</p>
+                        <center><h3 class="text-white mb-3">Make Appointment</h3> </center>
                         <br>
+                        <center>
+                        <p class="text-white">
+                        Ready For Your Rehabilitation Journey?
+                        </p>
+                        </center>
+                       <br>
+                     
                         
                         
                         <!-- <h2 class="text-white mb-0">+012 345 6789</h2> -->
@@ -222,7 +249,7 @@
                            
                            
                             
-                            <a href="appointment.php" class="btn btn-primary py-2 px-4 ms-3">Appointment</a>
+                            <a href="appointment.php" class="btn btn-primary py-2 px-4 ms-3">Book Now</a>
                         </div>
                         <br>
                        <!-- <p class="text-white">Start Your Path to Recovery Today.</p>  --> 
@@ -389,8 +416,10 @@
                                 <h5 class="m-0">Orthopedic Physiotherapy</h5>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
+                
                 <!-- <div class="col-lg-5 service-item wow zoomIn" data-wow-delay="0.9s">
                     <div class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-4">
                         <h3 class="text-white mb-3">Make Appointment</h3>

@@ -16,7 +16,7 @@
 
     ?>
     <form method="post" class="w-50 bg-dark p-3 mx-auto" enctype="multipart/form-data">
-        <h1 class="text-light text-center mb-5">ADD A Blog </h1>
+        <h1 class="text-light text-center mb-5">Add a Blog </h1>
         <input type="text" placeholder="Enter name of the Blog" name="c_name" class="form-control"><br>
         <input type="text" placeholder="Enter short description" name="c_des" class="form-control"><br>
 
@@ -39,8 +39,8 @@
             $n_image = implode(",",$images);
             print_r($n_image);
         
-            $carname = $_POST['c_name'];
-            $cardes = $_POST['c_des'];
+            $c_name = $_POST['c_name'];
+            $c_des = $_POST['c_des'];
 
             $insert = "INSERT INTO `blog`(`c_name`,`c_des`, `n_image`) VALUES ('$c_name','$c_des','$n_image')";
             mysqli_query($conn,$insert);
