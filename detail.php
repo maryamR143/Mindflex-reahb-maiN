@@ -13,22 +13,22 @@
 
   }
   .details-pera{
-    width: 100%;
+    width: 50%;
     margin: auto;
     /* background-color:red; */
 
 }
 .imgs-div{
   width: 100%;
-  height: 500px;
+  height: 400px;
 display: flex;
 
 /* background-color:black; */
 }
 .detail-img {
 
-  width: 90%;
-    height: 500px;
+  width: 100%;
+    height: 400px;
     border-style: hidden;
     display:flex;
 }
@@ -42,7 +42,7 @@ display: flex;
     top: 200px;
     left: 20%;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
     font-family: muli, sans-serif, Helvetica, Arial, sans-serif;
 }
@@ -92,13 +92,13 @@ display: flex;
       </section>
 </div>
     </div>
-    <!-- <div class="imgs-div">
+    <div class="imgs-div">
         <div style="border-style: hidden;" class="detail-img"><img style="border-style: hidden;"
   src="uploads/" ></div>
         <div class="detail-img" ><img  src="" ></div>
         <div class="detail-img"><img  ></div>
     </div>
-  </div> -->
+  </div>
   <div class="imgs-div">
                <div class="piclist">
                    <?php

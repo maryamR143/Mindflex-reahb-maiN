@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Blogs</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>News</title> -->
 
+    <link href="style-news.css" rel="stylesheet" />
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    
     <meta charset="utf-8">
     <title>Mindflex Rehabilitation</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -37,10 +47,33 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="loginform.css">
-
-
 </head>
+
 <body>
+
+<?php
+        include "config.php";
+        session_start();
+        $mysql = "SELECT * from blog";
+        $result = mysqli_query($conn,$mysql);
+        
+    ?>
+  
+    <!-- Spinner Start -->
+    <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-dark m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div> -->
+    <!-- Spinner End -->
+
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
         <div class="row gx-0">
@@ -64,7 +97,7 @@
     <!-- Topbar End -->
 
 
-    <!-- Navbar Start -->
+  <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
         <a href="index.php" class="navbar-brand p-0">
             <h1 class="m-0 text-primary"><i class="fa fa-brain me-2"></i>Mindflex Rehabilitation</h1>
@@ -76,13 +109,13 @@
             <div class="navbar-nav ms-auto py-0">
                 <a href="index.php" class="nav-item nav-link">Home</a>
                 <a href="blog.php" class="nav-item nav-link">Blog</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="about.html" class="nav-item nav-link active">About</a>
                 <a href="service.html" class="nav-item nav-link">Service</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
                         <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                        <a href="team.html" class="dropdown-item active">Our Doctors</a>
+                        <a href="team.html" class="dropdown-item">Our Dentist</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="appointment.php" class="dropdown-item">Appointment</a>
                     </div>
@@ -90,12 +123,23 @@
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            <a href="signupform.php" class="btn btn-primary py-2 px-4 ms-3">Signup</a>
+            <a href="loginform.html" class="btn btn-primary py-2 px-4 ms-3">Login</a>
         </div>
     </nav>
     <!-- Navbar End -->
 
-
+ <!-- Hero Start -->
+ <div class="container-fluid bg-primary py-5 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">Blog</h1>
+                <a href="" class="h4 text-white">Home</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="" class="h4 text-white">Blog</a>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
         <div class="modal-dialog modal-fullscreen">
@@ -112,50 +156,45 @@
             </div>
         </div>
     </div>
+    
+  
+   <div class="news-main">
+    <div class="container-fluid m-div">
+        <div class="row mt-4 pb-4 pt-2  n-img-size"  >
+        <?php
+            while($row = mysqli_fetch_assoc($result)){
+                $arr = explode(",",$row['n_image']);
+        ?>
+            <div class="col-5  ">
+            <div class="card card-block card-5 m-img-size ">
+            <a href="detail.php?N_id=<?php echo $row['N_id']?>">
+                <img src="uploads/<?php echo $arr[0]?>" class="card-img-top" alt="...">
+            </a>
+                
+            <p class="n-text">
+                <p class="card-title"><b><?php echo $row["c_name"] ?></b></p>
+                <p class="card-title"><?php echo $row["c_des"] ?></p>
 
+                </p>
+            </div>
 
-
-    <?php
-        include "config.php";
-        $mysql = "SELECT * from blog";
-        $result = mysqli_query($conn,$mysql);
-
-    ?>
-
-
-
-    <form method="post" class="w-50 bg-dark p-3 mx-auto" enctype="multipart/form-data">
-        <h1 class="text-light text-center mb-5">Add a Blog </h1>
-        <input type="text" placeholder="Enter name of the Blog" name="c_name" class="form-control"><br>
-        <input type="text" placeholder="Enter short description" name="c_des" class="form-control"><br>
-
-        <input type="file" placeholder="Enter product name" name="files[]" multiple="multiple" class="form-control"><br>
-        <br>
-        <div class="text-center"><button name="submit" class="btn btn-warning w-50" >Submit</button></div>
-    </form>
-    <?php
-        if(isset($_POST['submit'])){
-            $uploaddir = "uploads/";
-            for ($i=0; $i < count($_FILES['files']['tmp_name']) ; $i++) { 
-                $fileupload = $uploaddir.basename($_FILES['files']['name'][$i]);
-                $images[] = basename($_FILES['files']['name'][$i]);
-                $filetype = strtolower(pathinfo($fileupload,PATHINFO_EXTENSION));
-                if($filetype == 'jpg' || $filetype == "jpeg" || $filetype == "png" || $filetype == "jfif"){
-                    if(move_uploaded_file($_FILES['files']['tmp_name'][$i],$fileupload)){
-                    }
-                }
+            </div>
+            <?php
             }
-            $n_image = implode(",",$images);
-            print_r($n_image);
+        ?>
+        </div>
         
-            $c_name = $_POST['c_name'];
-            $c_des = $_POST['c_des'];
+        </div>
+    </div>
+    
 
-            $insert = "INSERT INTO `blog`(`c_name`,`c_des`, `n_image`) VALUES ('$c_name','$c_des','$n_image')";
-            mysqli_query($conn,$insert);
-            header("location:blog.php");
-        }
+   
 
-    ?>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
 </body>
 </html>
