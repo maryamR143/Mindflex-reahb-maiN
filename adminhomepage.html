@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mindflex Rehabilitation</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="loginform.css"> 
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-dark m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+        <a href="index.php" class="navbar-brand p-0">
+            <h1 class="m-0 text-primary"><i class="fa fa-brain me-2"></i>Mindflex Rehabilitation</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="adminhomepage.html" class="nav-item nav-link">All users </a>
+                <a href="doctorslist.html" class="nav-item nav-link">Doctors</a>
+                <a href="about.html" class="nav-item nav-link">Requests</a>
+                <a href="service.html" class="nav-item nav-link">Appointment List</a>
+                <a href="service.html" class="nav-item nav-link">Logout</a>
+               
+            </div>
+       
+        </div>
+    </nav>
+ 
+
+
+
+
+
+
+  <style>
+    /* Basic styling for demonstration purposes */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffffff;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.4);
+      padding-top: 60px;
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<br>
+<header>
+  
+    <h1>User List</h1>
+</header>
+
+<main>
+  <input type="text" id="searchInput" placeholder="Search users...">
+  <table id="userTable">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Department</th>
+        <th>Contact Information</th>
+        <th>Last Login</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="userList">
+      <!-- User data will be dynamically added here -->
+    </tbody>
+  </table>
+</main>
+
+<!-- Modal for displaying user details -->
+<div id="userModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="userDetails">
+      <!-- User details will be dynamically added here -->
+    </div>
+  </div>
+</div>
+
+<script>
+  // Dummy user data for demonstration
+  const users = [
+    { id: 1, name: 'John Doe', role: 'Doctor', department: 'Cardiology', contact: 'johndoe@example.com', lastLogin: '2024-05-10', status: 'Active' },
+    { id: 2, name: 'Jane Smith', role: 'Nurse', department: 'Pediatrics', contact: 'janesmith@example.com', lastLogin: '2024-05-09', status: 'Active' }
+    // Add more user data as needed
+  ];
+
+  // Function to display users in the table
+  function displayUsers() {
+    const userList = document.getElementById('userList');
+    userList.innerHTML = '';
+
+    users.forEach(user => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${user.id}</td>
+        <td>${user.name}</td>
+        <td>${user.role}</td>
+        <td>${user.department}</td>
+        <td>${user.contact}</td>
+        <td>${user.lastLogin}</td>
+        <td>${user.status}</td>
+        <td><button onclick="openUserModal(${user.id})">View</button></td>
+      `;
+      userList.appendChild(row);
+    });
+  }
+
+  // Function to open user details modal
+  function openUserModal(userId) {
+    const user = users.find(user => user.id === userId);
+    const modal = document.getElementById('userModal');
+    const userDetails = document.getElementById('userDetails');
+    userDetails.innerHTML = `
+      <h2>User Details</h2>
+      <p><strong>Name:</strong> ${user.name}</p>
+      <p><strong>Role:</strong> ${user.role}</p>
+      <p><strong>Department:</strong> ${user.department}</p>
+      <p><strong>Contact Information:</strong> ${user.contact}</p>
+      <p><strong>Last Login:</strong> ${user.lastLogin}</p>
+      <p><strong>Status:</strong> ${user.status}</p>
+    `;
+    modal.style.display = 'block';
+  }
+
+  // Function to close user details modal
+  function closeUserModal() {
+    const modal = document.getElementById('userModal');
+    modal.style.display = 'none';
+  }
+
+  // Close modal when the user clicks outside of it
+  window.onclick = function(event) {
+    const modal = document.getElementById('userModal');
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  };
+
+  // Close modal when the user clicks the close button
+  document.querySelector('.close').addEventListener('click', closeUserModal);
+
+  // Display users when the page loads
+  window.onload = displayUsers;
+</script>
+
+
+
+
+
+    
+
+
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="lib/twentytwenty/jquery.event.move.js"></script>
+<script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>
+
+</html>
