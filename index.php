@@ -102,7 +102,17 @@
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            <a href="loginform.php" class="btn btn-primary py-2 px-4 ms-3">Login</a>
+            <!-- <a href="loginform.php" class="btn btn-primary py-2 px-4 ms-3">Login</a> -->
+            <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle py-2 px-4 ms-3" type="button" id="loginDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    Login
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="loginDropdown">
+    <li><a class="dropdown-item" href="loginform.php?type=doctor">Doctor</a></li>
+    <li><a class="dropdown-item" href="loginform.php?type=patient">Patient</a></li>
+    <li><a class="dropdown-item" href="loginform.php?type=admin">Admin</a></li>
+  </ul>
+</div>
         </div>
     </nav>
     <!-- Navbar End -->
