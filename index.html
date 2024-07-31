@@ -799,7 +799,7 @@
         .chatbot-icon {
             width: 100%;
             height: 100%;
-            fill: #333;
+            fill: #06A3DA;
             transition: fill 0.3s ease;
         }
 
@@ -810,41 +810,35 @@
             right: 20px !important;
             z-index: 9998 !important;
             width: 350px; /* Adjust as needed */
-            height: 200px; /* Adjust as needed */
+            height: 190px; /* Adjust as needed */
         }
     </style>
 </head>
 <body>
-    <!-- Chatbot button -->
-    <button class="chatbot-button" id="chatbot-button" onclick="toggleChatbot()">
-        <svg class="chatbot-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-3-7h2v2H9v-2zm4 0h2v2h-2v-2zm-4-4h8v2H9V9z"/>
-        </svg>
-    </button>
+    
 
     <!-- Botpress Webchat Embed Code -->
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script>
-        window.botpressWebChat.init({
-            composerPlaceholder: "Chat with bot",
-            botConversationDescription: "This chatbot was built surprisingly fast with Botpress",
-            botId: "073ae091-2b73-4d40-92d3-01b67eab1e30",
-            hostUrl: "https://cdn.botpress.cloud/webchat/v1",
-            messagingUrl: "https://messaging.botpress.cloud",
-            clientId: "073ae091-2b73-4d40-92d3-01b67eab1e30",
-            webhookId: "7741d6aa-3ad7-49ba-bf6b-9a7ffa8f89bb",
-            lazySocket: true,
-            themeName: "prism",
-            frontendVersion: "v1",
-            showPoweredBy: true,
-            theme: "prism",
-            themeColor: "#2563eb",
-            allowedOrigins: []
-        });
-    </script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with bot",
+      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+      "botId": "073ae091-2b73-4d40-92d3-01b67eab1e30",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "073ae091-2b73-4d40-92d3-01b67eab1e30",
+      "webhookId": "7741d6aa-3ad7-49ba-bf6b-9a7ffa8f89bb",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+  });
+</script>
 
-    <script>
+    <!-- <script>
         function toggleChatbot() {
             var chatbotContainer = document.querySelector('.bp-widget-web');
             var chatbotButton = document.getElementById('chatbot-button');
@@ -856,7 +850,7 @@
                 chatbotButton.style.display = 'block';
             }
         }
-    </script>
+    </script> -->
 </body>
 </html>
 
